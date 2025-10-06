@@ -3,34 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voorbeeld website Hoornbeeck</title>
+    <title>Hoornbeeck Website</title>
     <link rel="stylesheet" href="style_fixed.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-<!-- Header met Hoornbeeck-logo -->
+<!-- Header -->
 <header>
     <div class="container header-inner">
-        <a href="index.html" class="logo">
+        <a href="#" class="logo">
             <img src="logo-hoornbeeck.png" alt="Hoornbeeck College Logo">
         </a>
         <nav>
             <ul>
-                <li><a href="#over-hoornbeeck">Over het Hoornbeeck College</a></li>
-                <li><a href="#ouderavond">Over de Ouderavond</a></li>
-                <li><a href="#doel">Doel</a></li>
-                <li><a href="#organisatie">Organisatie</a></li>
-                <li><a href="#programma">Programma</a></li>
-                <li><a href="#plattegrond">Plattegrond</a></li>
-                <li><a href="#ict-opleidingen">ICT Opleidingen</a></li>
-                <li><a href="#sfeerbeelden">Sfeerbeelden</a></li>
-                <li><a href="#ontwikkelaar">Over de ontwikkelaar</a></li>
+                <li><a href="#about">Over het Hoornbeeck College</a></li>
+                <li><a href="#projects">Projecten</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
+<!-- Hero sectie -->
 <section id="hero">
     <div class="container">
         <h2>Goedendag, ik ben Karel van der Horst</h2>
@@ -38,7 +33,7 @@
     </div>
 </section>
 
-<!-- Over mij / Hoornbeeck -->
+<!-- Over mij -->
 <section id="about">
     <div class="container">
         <h2>About me</h2>
@@ -46,7 +41,7 @@
     </div>
 </section>
 
-<!-- Main content zonder tijdlijn -->
+<!-- Main content -->
 <div class="main-content-wrapper container">
     <main class="main-content">
         <!-- Projecten -->
@@ -55,30 +50,22 @@
                 <h2>Projecten</h2>
                 <div class="project-grid">
                     <div class="project-card">
-                        <div class="project-icon">
-                            <i class="fa-solid fa-code"></i>
-                        </div>
+                        <div class="project-icon"><i class="fa-solid fa-code"></i></div>
                         <h3>Project 1</h3>
                         <p>Omschrijving van project 1</p>
                     </div>
                     <div class="project-card">
-                        <div class="project-icon">
-                            <i class="fa-solid fa-computer"></i>
-                        </div>
+                        <div class="project-icon"><i class="fa-solid fa-computer"></i></div>
                         <h3>Project 2</h3>
                         <p>Omschrijving van project 2</p>
                     </div>
                     <div class="project-card">
-                        <div class="project-icon">
-                            <i class="fa-solid fa-robot"></i>
-                        </div>
+                        <div class="project-icon"><i class="fa-solid fa-robot"></i></div>
                         <h3>Project 3</h3>
                         <p>Omschrijving van project 3</p>
                     </div>
                     <div class="project-card">
-                        <div class="project-icon">
-                            <i class="fa-solid fa-code"></i>
-                        </div>
+                        <div class="project-icon"><i class="fa-solid fa-code"></i></div>
                         <h3>Project 4</h3>
                         <p>Omschrijving van project 4</p>
                     </div>
@@ -100,7 +87,7 @@
         </section>
     </main>
 
-    <!-- Sidebar zonder tijdlijn -->
+    <!-- Sidebar -->
     <aside class="sidebar">
         <h2>Open Avond Informatie</h2>
         <p><strong>Datum:</strong> 15 oktober 2025</p>
@@ -117,6 +104,18 @@
         <p>&copy; 2025 Mijn eerste website. All rights reserved.</p>
     </div>
 </footer>
+
+<!-- JavaScript voor scroll-effect header -->
+<script>
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+</script>
 
 </body>
 </html>
