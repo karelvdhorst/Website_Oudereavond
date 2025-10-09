@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Opleidingen — Hoornbeeck (voorbeeld)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">Hoornbeeck (voorbeeld)</a>
+      <nav class="main-nav" aria-label="Hoofdmenu">
+        <ul>
+          <li><a href="#">Opleidingen</a></li>
+          <li><a href="#">Sectoren</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="btn search-btn" aria-label="Zoeken">🔍</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Opleidingen | Sector Techniek & Natuur (voorbeeld)</h1>
+        <p class="lead">Bekijk alle mbo-opleidingen binnen de sector. Filter, vergelijk en bekijk details.</p>
+      </div>
+    </section>
+
+    <section class="filters container">
+      <div class="filter-row">
+        <label>
+          <span>Sector</span>
+          <select>
+            <option>Alle sectoren</option>
+            <option selected>Techniek & Natuur</option>
+            <option>Vakken</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Richting</span>
+          <select>
+            <option>Alle richtingen</option>
+            <option selected>Mechanica</option>
+            <option>Installatietechniek</option>
+          </select>
+        </label>
+
+        <label class="search">
+          <input type="search" placeholder="Zoek opleiding, locatie..." />
+        </label>
+      </div>
+    </section>
+
+    <section class="programs container" aria-label="Lijst van opleidingen">
+      <!-- Card 1 -->
+      <article class="card">
+        <div class="card-media" aria-hidden="true">
+          <svg viewBox="0 0 600 200" preserveAspectRatio="none"><rect width="100%" height="100%" /></svg>
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">MBO Mechanica (niveau 3)</h2>
+          <p class="card-meta">Locatie: Hoornbeeck Schoolstraat</p>
+          <p>Leer repareren en onderhouden van machines en voertuigsystemen. Praktijkgericht, stages inbegrepen.</p>
+          <div class="card-footer">
+            <a class="btn btn-primary" href="#">Bekijk opleiding</a>
+            <a class="btn btn-outline" href="#">Aanmelden</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <div class="card-media" aria-hidden="true">
+          <svg viewBox="0 0 600 200" preserveAspectRatio="none"><rect width="100%" height="100%" /></svg>
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Installatietechniek (niveau 4)</h2>
+          <p class="card-meta">Locatie: Hoornbeeck Campus</p>
+          <p>Opgeleid tot vakman in verwarming, sanitair en duurzame energieoplossingen.</p>
+          <div class="card-footer">
+            <a class="btn btn-primary" href="#">Bekijk opleiding</a>
+            <a class="btn btn-outline" href="#">Aanmelden</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <div class="card-media" aria-hidden="true">
+          <svg viewBox="0 0 600 200" preserveAspectRatio="none"><rect width="100%" height="100%" /></svg>
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Tuin & Landschap (niveau 2)</h2>
+          <p class="card-meta">Locatie: Hoornbeeck Groen</p>
+          <p>Leren ontwerpen, aanleggen en onderhouden van groen en buitenruimtes.</p>
+          <div class="card-footer">
+            <a class="btn btn-primary" href="#">Bekijk opleiding</a>
+            <a class="btn btn-outline" href="#">Aanmelden</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Plaats voor meer cards -->
+    </section>
+
+    <section class="pagination container" aria-label="Paginering">
+      <button class="btn">← Vorige</button>
+      <div class="page-numbers">Pagina <strong>1</strong> van 5</div>
+      <button class="btn">Volgende →</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Hoornbeeck (voorbeeld)</div>
+      <nav>
+        <a href="#">Privacy</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // Kleine nicety: zet jaartal
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
