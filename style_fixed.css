@@ -50,7 +50,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #f5ba36; /* HBC Gold hover */
+    color: #f5ba36; /* goudkleur bij hover */
 }
 
 /* Hero */
@@ -101,7 +101,7 @@ header nav ul li a:hover {
 }
 
 #about h2 {
-    color: #084887; /* donkerblauw */
+    color: #333;
     position: relative;
 }
 
@@ -168,7 +168,7 @@ header nav ul li a:hover {
 }
 
 .project-card h3 {
-    color: #084887;
+    color: #333;
 }
 
 /* Contact */
@@ -179,7 +179,7 @@ header nav ul li a:hover {
 }
 
 #contact h2 {
-    color: #084887;
+    color: #333;
 }
 
 #contact-form {
@@ -226,7 +226,7 @@ header nav ul li a:hover {
 }
 
 .sidebar h2 {
-    color: #084887;
+    color: #333;
 }
 
 /* Footer */
@@ -254,7 +254,7 @@ footer {
     }
 }
 
-/* ===== Submenu-balk met dezelfde stijl als header ===== */
+/* ===== Submenu-balk (zelfde stijl als header, zonder blauw) ===== */
 .submenu-balk {
     display: none; /* standaard verborgen */
     background: linear-gradient(to right, #ffffff 0%, #00a9a3 100%);
@@ -277,17 +277,16 @@ footer {
 
 .submenu-balk a {
     text-decoration: none;
-    color: white; /* zelfde als header */
+    color: white; /* wit zoals header */
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .submenu-balk a:hover {
-    color: #f5ba36; /* goudkleur bij hover */
+    color: #f5ba36; /* goud bij hover */
 }
 
 /* Zorg dat de hero niet onder de balk verdwijnt */
 body.show-submenu #hero {
     margin-top: 140px; /* extra ruimte als submenu-balk zichtbaar is */
 }
-    
