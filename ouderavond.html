@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
@@ -6,10 +6,60 @@
     <title>Hoornbeeck Website</title>
     <link rel="stylesheet" href="style_fixed.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Navigatiebalk */
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 10px 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background-color: #004b86;
+            border-radius: 4px;
+        }
+
+        /* Submenu-balk (verstopt tot je klikt) */
+        .submenu-balk {
+            display: none;
+            background-color: #e6f0fa;
+            padding: 10px 0;
+            text-align: center;
+            border-top: 2px solid #004b86;
+        }
+
+        .submenu-balk ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: inline-flex;
+            gap: 30px;
+        }
+
+        .submenu-balk a {
+            text-decoration: none;
+            color: #004b86;
+            font-weight: 500;
+        }
+
+        .submenu-balk a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
- <header>
+<header>
     <div class="container header-inner">
         <a href="#" class="logo">
             <img src="logo-hoornbeeck.png" alt="Hoornbeeck College Logo">
@@ -17,27 +67,25 @@
          
         <a href="website voorbeeld.html"></a>
 
-   <nav>
-    <ul>
-        <li><a href="about.html">Over het Hoornbeeck College</a></li>
-
-        <li class="dropdown">
-            <a href="ouderavond.html">Ouderavond</a>
-            <ul class="dropdown-content">
-                <li><a href="doel.html">Doel</a></li>
-                <li><a href="organisatie.html">Organisatie</a></li>
-                <li><a href="programma.html">Programma</a></li>
-                <li><a href="plattegrond.html">Plattegrond</a></li>
+        <nav>
+            <ul>
+                <li><a href="about.html">Over het Hoornbeeck College</a></li>
+                <li><a href="#" id="ouderavond-btn">Ouderavond ▾</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="ontwikkelaar.html">Over de ontwikkelaar</a></li>
             </ul>
-        </li>
-
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="ontwikkelaar.html">Over de ontwikkelaar</a></li>
-    </ul>
-   </nav>
-
+        </nav>
     </div>
 </header>
+
+<div id="ouderavond-balk" class="submenu-balk">
+    <ul>
+        <li><a href="doel.html">Doel</a></li>
+        <li><a href="organisatie.html">Organisatie</a></li>
+        <li><a href="programma.html">Programma</a></li>
+        <li><a href="plattegrond.html">Plattegrond</a></li>
+    </ul>
+</div>
 
 
 
