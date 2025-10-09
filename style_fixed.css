@@ -42,15 +42,29 @@ header nav ul {
     padding: 0;
 }
 
+header nav ul li {
+    position: relative;
+    background: none; /* geen achtergrond */
+}
+
 header nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
+    background: none;
+    border: none;
+    padding: 0.5rem 0;
+    display: inline-block;
 }
 
-header nav ul li a:hover {
-    color: #f5ba36; /* goudkleur bij hover */
+header nav ul li a:hover,
+header nav ul li a:focus,
+header nav ul li a:active {
+    color: #f5ba36; /* goud bij hover */
+    background: none;
+    outline: none;
+    box-shadow: none;
 }
 
 /* Hero */
@@ -254,7 +268,7 @@ footer {
     }
 }
 
-/* ===== Submenu-balk (zelfde stijl als header, zonder blauw) ===== */
+/* ===== Submenu-balk (zelfde stijl als header, geen blauw) ===== */
 .submenu-balk {
     display: none; /* standaard verborgen */
     background: linear-gradient(to right, #ffffff 0%, #00a9a3 100%);
@@ -277,16 +291,25 @@ footer {
 
 .submenu-balk a {
     text-decoration: none;
-    color: white; /* wit zoals header */
+    color: white;
     font-weight: bold;
     transition: color 0.3s ease;
+    background: none;
+    border: none;
+    padding: 0.5rem 0;
+    display: inline-block;
 }
 
-.submenu-balk a:hover {
-    color: #f5ba36; /* goud bij hover */
+.submenu-balk a:hover,
+.submenu-balk a:focus,
+.submenu-balk a:active {
+    color: #f5ba36;
+    background: none;
+    outline: none;
+    box-shadow: none;
 }
 
 /* Zorg dat de hero niet onder de balk verdwijnt */
 body.show-submenu #hero {
-    margin-top: 140px; /* extra ruimte als submenu-balk zichtbaar is */
+    margin-top: 140px;
 }
