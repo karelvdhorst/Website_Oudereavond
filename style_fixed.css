@@ -1,3 +1,4 @@
+/* ===== BASIS ===== */
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -13,7 +14,7 @@ body {
     margin: auto;
 }
 
-/* Header met horizontale gradient */
+/* ===== HEADER ===== */
 header {
     background: linear-gradient(to right, #ffffff 0%, #00a9a3 100%);
     padding: 1rem 0;
@@ -42,32 +43,52 @@ header nav ul {
     padding: 0;
 }
 
-header nav ul li {
-    position: relative;
-    background: none; /* geen achtergrond */
-}
-
 header nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
-    background: none;
-    border: none;
     padding: 0.5rem 0;
     display: inline-block;
 }
 
-header nav ul li a:hover,
-header nav ul li a:focus,
-header nav ul li a:active {
-    color: #f5ba36; /* goud bij hover */
-    background: none;
-    outline: none;
-    box-shadow: none;
+header nav ul li a:hover {
+    color: #f5ba36; /* goud accent */
 }
 
-/* Hero */
+/* ===== SUBMENU ===== */
+.submenu-balk {
+    display: none;
+    background: linear-gradient(to right, #ffffff 0%, #00a9a3 100%);
+    padding: 0.75rem 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 100px;
+    z-index: 900;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.submenu-balk ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    gap: 2rem;
+}
+
+.submenu-balk a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.submenu-balk a:hover {
+    color: #f5ba36;
+}
+
+/* ===== HERO ===== */
 #hero {
     position: relative;
     height: 50vh;
@@ -79,7 +100,7 @@ header nav ul li a:active {
     justify-content: center;
     text-align: center;
     color: white;
-    margin-top: 70px; /* ruimte voor fixed header */
+    margin-top: 70px;
 }
 
 #hero::before {
@@ -88,7 +109,7 @@ header nav ul li a:active {
     top: 0; left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,169,163,0.4); /* HBC Groen overlay */
+    background-color: rgba(0,169,163,0.4);
     z-index: 1;
 }
 
@@ -105,10 +126,10 @@ header nav ul li a:active {
 
 #hero p {
     font-size: 1.2rem;
-    color: #f5ba36; /* accent goud */
+    color: #f5ba36;
 }
 
-/* About */
+/* ===== ABOUT ===== */
 #about {
     padding: 2rem 0;
     text-align: center;
@@ -129,121 +150,47 @@ header nav ul li a:active {
     border-radius: 2px;
 }
 
-/* Main content wrapper */
-.main-content-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin: 2rem auto;
+#about p {
+    line-height: 1.6;
 }
 
-/* Main content */
-.main-content {
-    flex: 2;
-}
-
-/* Projecten */
-#projects {
-    background-color: #ffffff;
-    padding: 2rem 0;
-}
-
-.project-grid {
+/* ===== ICT OPLEIDINGEN ===== */
+.ict-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
-.project-card {
+.ict-tile {
     background-color: #ffffff;
-    padding: 1rem;
     border: 2px solid #00a9a3;
-    border-radius: 10px;
+    border-radius: 12px;
     text-align: center;
+    padding: 1.5rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-card:hover {
+.ict-tile:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(245,186,54,0.3);
+    box-shadow: 0 6px 15px rgba(245,186,54,0.3);
 }
 
-.project-icon {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: #00a9a3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1rem auto;
-    color: white;
-    font-size: 1.5rem;
+.ict-tile img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
 }
 
-.project-card h3 {
-    color: #333;
+.ict-tile h3 {
+    color: #004b86;
+    font-size: 1.2rem;
+    margin: 0;
 }
 
-/* Contact */
-#contact {
-    padding: 2rem 0;
-    text-align: center;
-    background-color: #ffffff;
-}
-
-#contact h2 {
-    color: #333;
-}
-
-#contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-#contact-form input,
-#contact-form textarea {
-    padding: 10px;
-    border: 1px solid #00a9a3;
-    border-radius: 5px;
-}
-
-#contact-form button {
-    padding: 10px;
-    background-color: #00a9a3;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-#contact-form button:hover {
-    background-color: #f5ba36;
-    transform: translateY(-2px);
-}
-
-/* Sidebar */
-.sidebar {
-    flex: 1;
-    min-width: 260px;
-    max-width: 340px;
-    background-color: #ffffff;
-    padding: 2rem 1.5rem;
-    border-radius: 12px;
-    border: 1px solid #00a9a3;
-    height: fit-content;
-}
-
-.sidebar h2 {
-    color: #333;
-}
-
-/* Footer */
+/* ===== FOOTER ===== */
 footer {
     background-color: #00a9a3;
     color: white;
@@ -251,12 +198,8 @@ footer {
     padding: 1rem 0;
 }
 
-/* Responsive */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
-    .main-content-wrapper {
-        flex-direction: column;
-    }
-
     header .header-inner {
         flex-direction: column;
         gap: 1rem;
@@ -266,50 +209,4 @@ footer {
         flex-direction: column;
         gap: 1rem;
     }
-}
-
-/* ===== Submenu-balk (zelfde stijl als header, geen blauw) ===== */
-.submenu-balk {
-    display: none; /* standaard verborgen */
-    background: linear-gradient(to right, #ffffff 0%, #00a9a3 100%);
-    padding: 0.75rem 0;
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    top: 100px; /* direct onder de vaste header */
-    z-index: 900;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.submenu-balk ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: inline-flex;
-    gap: 2rem;
-}
-
-.submenu-balk a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: color 0.3s ease;
-    background: none;
-    border: none;
-    padding: 0.5rem 0;
-    display: inline-block;
-}
-
-.submenu-balk a:hover,
-.submenu-balk a:focus,
-.submenu-balk a:active {
-    color: #f5ba36;
-    background: none;
-    outline: none;
-    box-shadow: none;
-}
-
-/* Zorg dat de hero niet onder de balk verdwijnt */
-body.show-submenu #hero {
-    margin-top: 140px;
 }

@@ -90,6 +90,7 @@
 
 
 
+<!-- Footer -->
 <footer>
     <div class="container">
         <p>Hoornbeeck College Kampen, Willem Hendrik Zwartallee, 8265 TZ Kampen</p>
@@ -97,5 +98,15 @@
     </div>
 </footer>
 
+<!-- JavaScript voor de submenu-balk -->
+<script>
+document.getElementById('ouderavond-btn').addEventListener('click', function(event) {
+    event.preventDefault();
+    const balk = document.getElementById('ouderavond-balk');
+    balk.style.display = balk.style.display === 'block' ? 'none' : 'block';
+});
+</script>
+
 </body>
 </html>
+
