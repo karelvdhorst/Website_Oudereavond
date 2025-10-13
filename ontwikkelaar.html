@@ -1,112 +1,119 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoornbeeck Website</title>
-    <link rel="stylesheet" href="style_fixed.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Over de ontwikkelaar - Hoornbeeck College</title>
+  <link rel="stylesheet" href="style_fixed.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .dev-section {
+      text-align: center;
+      padding: 3rem 0;
+    }
 
-    <style>
-        /* Navigatiebalk */
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-            margin: 0;
-            padding: 10px 0;
-        }
+    .dev-section h2 {
+      color: #004b86;
+      margin-bottom: 1rem;
+    }
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            display: block;
-        }
+    .dev-section p {
+      max-width: 800px;
+      margin: 0 auto 1.5rem auto;
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
 
-        nav ul li a:hover {
-            background-color: #004b86;
-            border-radius: 4px;
-        }
+    .dev-photo {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 1.5rem 0;
+      border: 4px solid #00a9a3;
+    }
 
-        /* Submenu-balk (verstopt tot je klikt) */
-        .submenu-balk {
-            display: none;
-            background-color: #e6f0fa;
-            padding: 10px 0;
-            text-align: center;
-            border-top: 2px solid #004b86;
-        }
+    .dev-icons i {
+      font-size: 1.5rem;
+      margin: 0 10px;
+      color: #00a9a3;
+      transition: color 0.3s ease;
+    }
 
-        .submenu-balk ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: inline-flex;
-            gap: 30px;
-        }
-
-        .submenu-balk a {
-            text-decoration: none;
-            color: #004b86;
-            font-weight: 500;
-        }
-
-        .submenu-balk a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    .dev-icons i:hover {
+      color: #f5ba36;
+    }
+  </style>
 </head>
+
 <body>
-
-<header>
+  <!-- HEADER -->
+  <header>
     <div class="container header-inner">
-        <a href="#" class="logo">
-            <img src="logo-hoornbeeck.png" alt="Hoornbeeck College Logo">
-        </a>
-         
-        <a href="website voorbeeld.html"></a>
+      <a href="index.html" class="logo">
+        <img src="logo-hoornbeeck.png" alt="Hoornbeeck College Logo">
+      </a>
 
-        <nav>
-            <ul>
-                <li><a href="about.html">Over het Hoornbeeck College</a></li>
-                <li><a href="#" id="ouderavond-btn">Ouderavond ▾</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="ontwikkelaar.html">Over de ontwikkelaar</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li><a href="about.html">Over het Hoornbeeck College</a></li>
+          <li><a href="#" id="ouderavond-btn">Ouderavond ▾</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="ontwikkelaar.html" style="color:#f5ba36;">Over de ontwikkelaar</a></li>
+        </ul>
+      </nav>
     </div>
-</header>
+  </header>
 
-<!-- Balk onder header met submenu -->
-<div id="ouderavond-balk" class="submenu-balk">
+  <!-- SUBMENU -->
+  <div id="ouderavond-balk" class="submenu-balk">
     <ul>
-        <li><a href="doel.html">Doel</a></li>
-        <li><a href="organisatie.html">Organisatie</a></li>
-        <li><a href="programma.html">Programma</a></li>
-        <li><a href="plattegrond.html">Plattegrond</a></li>
+      <li><a href="doel.html">Doel</a></li>
+      <li><a href="organisatie.html">Organisatie</a></li>
+      <li><a href="programma.html">Programma</a></li>
+      <li><a href="plattegrond.html">Plattegrond</a></li>
     </ul>
-</div>
+  </div>
 
+  <!-- MAIN -->
+  <main>
+    <section class="dev-section container">
+      <h2>Over de ontwikkelaar</h2>
 
+      <!-- Plaats hier eventueel je eigen foto -->
+      <img src="mijn-foto.jpg" alt="Ontwikkelaar" class="dev-photo">
 
-<!-- Footer -->
-<footer>
+      <p>Hallo! Mijn naam is Karel van der Horst, en ik heb deze website gemaakt als onderdeel van een project over het Hoornbeeck College in Kampen. 
+      Ik vind het leuk om  een website te bouwen waarin ik design en functionaliteit kan combineren.</p>
+
+      <p>Bij het ontwerpen van deze website heb ik veel geleerd over HTML, CSS en hoe je een site overzichtelijk en professioneel kunt opbouwen. 
+      Het was leuk om te zien hoe een idee in je hoofd uiteindelijk echt tot leven komt op het scherm.</p>
+
+      
+
+      <div class="dev-icons">
+        <a href="#"><i class="fa-brands fa-github"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
     <div class="container">
-        <p>Hoornbeeck College Kampen, Willem Hendrik Zwartallee, 8265 TZ Kampen</p>
-        <p>&copy; 2025 Mijn eerste website. All rights reserved.</p>
+      <p>Hoornbeeck College Kampen, Willem Hendrik Zwartallee, 8265 TZ Kampen</p>
+      <p>&copy; 2025 Mijn eerste website. All rights reserved.</p>
     </div>
-</footer>
+  </footer>
 
-<!-- JavaScript voor de submenu-balk -->
-<script>
-document.getElementById('ouderavond-btn').addEventListener('click', function(event) {
-    event.preventDefault();
-    const balk = document.getElementById('ouderavond-balk');
-    balk.style.display = balk.style.display === 'block' ? 'none' : 'block';
-});
-</script>
-
+  <!-- SCRIPT -->
+  <script>
+    document.getElementById('ouderavond-btn').addEventListener('click', function(event) {
+      event.preventDefault();
+      const balk = document.getElementById('ouderavond-balk');
+      balk.style.display = balk.style.display === 'block' ? 'none' : 'block';
+    });
+  </script>
 </body>
 </html>
-

@@ -1,72 +1,72 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoornbeeck Website</title>
-    <link rel="stylesheet" href="style_fixed.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plattegrond - Hoornbeeck College</title>
+<link rel="stylesheet" href="style_fixed.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+    html, body { height: 100%; margin: 0; display: flex; flex-direction: column; min-height: 100vh; font-family: Arial, Helvetica, sans-serif; }
+    main { flex: 1; margin-top: 140px; padding: 0 1rem; }
+    header { background: linear-gradient(to right, #ffffff 0%, #00a9a3 100%); padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000; }
+    header .header-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+    header .logo img { height: 60px; width: auto; }
+    header nav ul { list-style: none; display: flex; gap: 2rem; margin: 0; padding: 0; }
+    header nav ul li a { color: white; text-decoration: none; font-weight: bold; padding: 0.5rem 0; display: inline-block; transition: color 0.3s ease; }
+    header nav ul li a:hover { color: #f5ba36; }
+    .submenu-balk { display: none; background: linear-gradient(to right, #ffffff 0%, #00a9a3 100%); padding: 0.75rem 0; text-align: center; position: fixed; width: 100%; top: 100px; z-index: 900; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    .submenu-balk ul { list-style: none; margin: 0; padding: 0; display: inline-flex; gap: 2rem; }
+    .submenu-balk a { text-decoration: none; color: white; font-weight: bold; transition: color 0.3s ease; }
+    .submenu-balk a:hover { color: #f5ba36; }
+    footer { background-color: #00a9a3; color: white; text-align: center; padding: 1rem 0; }
 
-    <style>
-        /* Navigatiebalk */
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-            margin: 0;
-            padding: 10px 0;
-        }
+    /* Titel bovenaan de pagina */
+    .page-title {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        color: #004b86;
+        margin-bottom: 2rem;
+    }
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            display: block;
-        }
+    /* Plattegrond afbeeldingen */
+    .plattegrond-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
 
-        nav ul li a:hover {
-            background-color: #004b86;
-            border-radius: 4px;
-        }
+    .plattegrond-container img {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        display: block;
+        border: 2px solid #00a9a3;
+        border-radius: 8px;
+    }
 
-        /* Submenu-balk (verstopt tot je klikt) */
-        .submenu-balk {
-            display: none;
-            background-color: #e6f0fa;
-            padding: 10px 0;
-            text-align: center;
-            border-top: 2px solid #004b86;
-        }
+    .plattegrond-title {
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        color: #004b86;
+    }
 
-        .submenu-balk ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: inline-flex;
-            gap: 30px;
+    @media (min-width: 900px) {
+        .plattegrond-container {
+            grid-template-columns: repeat(2, 1fr);
         }
-
-        .submenu-balk a {
-            text-decoration: none;
-            color: #004b86;
-            font-weight: 500;
-        }
-
-        .submenu-balk a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
-
 <header>
     <div class="container header-inner">
-        <a href="#" class="logo">
+        <a href="index.html" class="logo">
             <img src="logo-hoornbeeck.png" alt="Hoornbeeck College Logo">
         </a>
-         
-        <a href="website voorbeeld.html"></a>
-
         <nav>
             <ul>
                 <li><a href="about.html">Over het Hoornbeeck College</a></li>
@@ -77,8 +77,6 @@
         </nav>
     </div>
 </header>
-
-<!-- Balk onder header met submenu -->
 <div id="ouderavond-balk" class="submenu-balk">
     <ul>
         <li><a href="doel.html">Doel</a></li>
@@ -87,28 +85,44 @@
         <li><a href="plattegrond.html">Plattegrond</a></li>
     </ul>
 </div>
-
-
-
-
-
-
-<!-- Footer -->
+<main>
+    <div class="container">
+        <div class="page-title">Plattegrond Hoornbeeck College Kampen</div>
+        <div class="plattegrond-container">
+            <div>
+                <div class="plattegrond-title">Begane grond</div>
+                <img src="beganegrond.jpg" alt="Plattegrond begane grond">
+            </div>
+            <div>
+                <div class="plattegrond-title">Verdieping 1</div>
+                <img src="verdieping1.jpg" alt="Plattegrond verdieping 1">
+            </div>
+            <div>
+                <div class="plattegrond-title">Verdieping 2</div>
+                <img src="verdieping2.jpg" alt="Plattegrond verdieping 2">
+            </div>
+        </div>
+    </div>
+</main>
 <footer>
     <div class="container">
         <p>Hoornbeeck College Kampen, Willem Hendrik Zwartallee, 8265 TZ Kampen</p>
-        <p>&copy; 2025 Mijn eerste website. All rights reserved.</p>
+        <p>&copy; 2025 Hoornbeeck College. Alle rechten voorbehouden.</p>
     </div>
 </footer>
-
-<!-- JavaScript voor de submenu-balk -->
 <script>
-document.getElementById('ouderavond-btn').addEventListener('click', function(event) {
-    event.preventDefault();
+    const btn = document.getElementById('ouderavond-btn');
     const balk = document.getElementById('ouderavond-balk');
-    balk.style.display = balk.style.display === 'block' ? 'none' : 'block';
-});
+    btn.addEventListener('click', function(event){
+        event.preventDefault();
+        const isOpen = balk.style.display === 'block';
+        balk.style.display = isOpen ? 'none' : 'block';
+    });
+    document.addEventListener('click', function(e){
+        if(!balk.contains(e.target) && e.target !== btn && balk.style.display === 'block'){
+            balk.style.display = 'none';
+        }
+    });
 </script>
-
 </body>
 </html>
