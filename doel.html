@@ -3,94 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoornbeeck College - Doel</title>
+    <title>Doel - Hoornbeeck College</title>
     <link rel="stylesheet" href="style_fixed.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
-        /* Extra styling specifiek voor deze pagina (optioneel) */
         main {
-            margin-top: 120px; /* ruimte onder fixed header */
-            padding: 2rem 0;
-        }
-        h1, h2 {
-            color: #004b86;
+            padding: 140px 0 60px 0;
             text-align: center;
         }
-        p {
+
+        main h1 {
+            color: #004b86;
+            margin-bottom: 1rem;
+        }
+
+        main p {
             max-width: 800px;
-            margin: 1rem auto;
-            line-height: 1.6;
+            margin: 0 auto 1rem auto;
+            line-height: 1.7;
+        }
+
+        .doel-image {
+            max-width: 90%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+            margin: 2rem auto;
+            display: block;
+        }
+
+        footer {
+            background-color: #00a9a3;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
         }
     </style>
 </head>
+
 <body>
+    <!-- ===== HEADER ===== -->
+    <header>
+        <div class="container header-inner">
+            <a href="about.html" class="logo">
+                <img src="logo-hoornbeeck.png" alt="Hoornbeeck College Logo">
+            </a>
+            
+            <nav>
+                <ul>
+                    <li><a href="about.html">Over het Hoornbeeck College</a></li>
+                    <li><a href="#" id="ouderavond-btn">Ouderavond ▾</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="ontwikkelaar.html">Over de ontwikkelaar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<!-- ===== HEADER ===== -->
-<header>
-    <div class="container header-inner">
-        <a href="index.html" class="logo">
-            <img src="logo-hoornbeeck.png" alt="Hoornbeeck College Logo">
-        </a>
-
-        <nav>
-            <ul>
-                <li><a href="about.html">Over het Hoornbeeck College</a></li>
-                <li><a href="#" id="ouderavond-btn">Ouderavond ▾</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="ontwikkelaar.html">Over de ontwikkelaar</a></li>
-            </ul>
-        </nav>
+    <!-- ===== SUBMENU ===== -->
+    <div id="ouderavond-balk" class="submenu-balk">
+        <ul>
+            <li><a href="doel.html">Doel</a></li>
+            <li><a href="organisatie.html">Organisatie</a></li>
+            <li><a href="programma.html">Programma</a></li>
+            <li><a href="plattegrond.html">Plattegrond</a></li>
+        </ul>
     </div>
-</header>
 
-<!-- ===== SUBMENU ===== -->
-<div id="ouderavond-balk" class="submenu-balk">
-    <ul>
-        <li><a href="doel.html">Doel</a></li>
-        <li><a href="organisatie.html">Organisatie</a></li>
-        <li><a href="programma.html">Programma</a></li>
-        <li><a href="plattegrond.html">Plattegrond</a></li>
-    </ul>
-</div>
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="container">
+        <h1>Doel van de ouderavond</h1>
 
-<!-- ===== MAIN CONTENT ===== -->
-<main class="container">
-    <h1>Doel van de ouderavond</h1>
-    <p>
-        Het doel van de ouderavond is om ouders en verzorgers inzicht te geven in de activiteiten en het onderwijsprogramma van het Hoornbeeck College. 
-        We willen dat iedereen goed geïnformeerd en betrokken is bij de ontwikkeling van onze studenten.
-    </p>
-    <p>
-        Tijdens deze avond presenteren de docenten en studenten hun projecten, zodat ouders een helder beeld krijgen van de mogelijkheden binnen de opleiding.
-    </p>
-</main>
+        <img src="presentatie.jpg" alt="Presentatie tijdens de ouderavond" class="doel-image">
 
-<!-- ===== FOOTER ===== -->
-<footer>
-    <div class="container">
-        <p>Hoornbeeck College Kampen, Willem Hendrik Zwartallee, 8265 TZ Kampen</p>
-        <p>&copy; 2025 Hoornbeeck College. Alle rechten voorbehouden.</p>
-    </div>
-</footer>
+        <p>
+            Tijdens de ouderavond willen we ouders en verzorgers op een laagdrempelige manier 
+            informeren over de opleiding van hun kind en het reilen en zeilen binnen het Hoornbeeck College.
+        </p>
+        <p>
+            Ouders krijgen inzicht in hoe de lessen en de begeleiding eruitzien, 
+            welke vakken er worden gegeven en hoe er wordt omgegaan met stages en toetsen.
+        </p>
+        <p>
+            Daarnaast is de ouderavond een belangrijk moment om elkaar beter te leren kennen — 
+            studenten, ouders en docenten — zodat we samen kunnen werken aan een goed en waardevol leertraject.
+        </p>
+        <p>
+            Ons doel is om een open communicatie te stimuleren en te laten zien hoe geloof, 
+            groei en praktijk samenkomen in het onderwijs op het Hoornbeeck College.
+        </p>
+    </main>
 
-<!-- ===== JAVASCRIPT ===== -->
-<script>
-    const btn = document.getElementById('ouderavond-btn');
-    const balk = document.getElementById('ouderavond-balk');
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <p>Hoornbeeck College Kampen, Willem Hendrik Zwartallee 1, 8265 TZ Kampen</p>
+            <p>&copy; 2025 Hoornbeeck Ouderavond. Alle rechten voorbehouden.</p>
+        </div>
+    </footer>
 
-    btn.addEventListener('click', function(event) {
-        event.preventDefault();
-        const isOpen = balk.style.display === 'block';
-        balk.style.display = isOpen ? 'none' : 'block';
-    });
-
-    // Close submenu when clicking outside
-    document.addEventListener('click', function(e) {
-        if (!balk.contains(e.target) && e.target !== btn && balk.style.display === 'block') {
-            balk.style.display = 'none';
-        }
-    });
-</script>
-
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        document.getElementById('ouderavond-btn').addEventListener('click', function(event) {
+            event.preventDefault();
+            const balk = document.getElementById('ouderavond-balk');
+            balk.style.display = balk.style.display === 'block' ? 'none' : 'block';
+        });
+    </script>
 </body>
 </html>

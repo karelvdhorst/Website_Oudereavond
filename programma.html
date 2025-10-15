@@ -1,34 +1,107 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programma - Hoornbeeck College</title>
-    <link rel="stylesheet" href="style_fixed.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        html, body { height: 100%; margin: 0; display: flex; flex-direction: column; min-height: 100vh; font-family: Arial, Helvetica, sans-serif; }
-        main { flex: 1; margin-top: 120px; }
-        header { background: linear-gradient(to right, #ffffff 0%, #00a9a3 100%); padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000; }
-        header .header-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
-        header .logo img { height: 60px; width: auto; }
-        header nav ul { list-style: none; display: flex; gap: 2rem; margin: 0; padding: 0; }
-        header nav ul li a { color: white; text-decoration: none; font-weight: bold; padding: 0.5rem 0; display: inline-block; transition: color 0.3s ease; }
-        header nav ul li a:hover { color: #f5ba36; }
-        .submenu-balk { display: none; background: linear-gradient(to right, #ffffff 0%, #00a9a3 100%); padding: 0.75rem 0; text-align: center; position: fixed; width: 100%; top: 100px; z-index: 900; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-        .submenu-balk ul { list-style: none; margin: 0; padding: 0; display: inline-flex; gap: 2rem; }
-        .submenu-balk a { text-decoration: none; color: white; font-weight: bold; transition: color 0.3s ease; }
-        .submenu-balk a:hover { color: #f5ba36; }
-        footer { background-color: #00a9a3; color: white; text-align: center; padding: 1rem 0; }
-        .programma-list { list-style:none; padding:0; margin:20px 0 0 0; }
-        .programma-list li { margin:10px 0; padding:8px 12px; border-radius:6px; background:#f7f9fc; display:flex; gap:12px; align-items:flex-start; }
-        .programma-time { font-weight:700; min-width:70px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Planning Ouderavond - Hoornbeeck College</title>
+<link rel="stylesheet" href="style_fixed.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+/* ===== HERO ===== */
+#hero {
+    position: relative;
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+#hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,169,163,0.4);
+    z-index: 1;
+}
+
+#hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+#hero h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+#hero p {
+    font-size: 1.2rem;
+    color: #f5ba36;
+}
+
+/* ===== PROGRAMMA ===== */
+.programma {
+    padding: 2rem 0;
+}
+
+.programma h2 {
+    text-align: center;
+    color: #004b86;
+    margin-bottom: 1rem;
+}
+
+.programma ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: auto;
+}
+
+.programma li {
+    display: flex;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    background: #f7f9fc;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+    align-items: center;
+}
+
+.programma-time {
+    font-weight: bold;
+    min-width: 70px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #00a9a3;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width: 600px) {
+    .programma li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+</style>
 </head>
 <body>
+
+<!-- ===== HEADER ===== -->
 <header>
     <div class="container header-inner">
-        <a href="index.html" class="logo">
+        <a href="about.html" class="logo">
             <img src="logo-hoornbeeck.png" alt="Hoornbeeck College Logo">
         </a>
         <nav>
@@ -41,6 +114,8 @@
         </nav>
     </div>
 </header>
+
+<!-- ===== SUBMENU ===== -->
 <div id="ouderavond-balk" class="submenu-balk">
     <ul>
         <li><a href="doel.html">Doel</a></li>
@@ -49,36 +124,53 @@
         <li><a href="plattegrond.html">Plattegrond</a></li>
     </ul>
 </div>
-<main>
+
+<!-- ===== HERO ===== -->
+<section id="hero" style="background-image: url('planning.jpg');">
     <div class="container">
-        <h1>Programma ouderavond</h1>
-        <ul class="programma-list">
-            <li><span class="programma-time">19:15</span><span>Ontvangst in de aula met koffie en thee.</span></li>
-            <li><span class="programma-time">19:30</span><span>Opening in lokaal <strong>2.02</strong>.</span></li>
-            <li><span class="programma-time">20:00</span><span>Begin presentaties.</span></li>
-            <li><span class="programma-time">21:00</span><span>Sluiting en gelegenheid voor een hapje en drankje.</span></li>
+        <h2>Planning Ouderavond</h2>
+        <p>Bekijk hier het overzicht van het programma.</p>
+    </div>
+</section>
+
+<!-- ===== PROGRAMMA ===== -->
+<section class="programma">
+    <div class="container">
+        <h2>Programma van de avond</h2>
+        <ul>
+            <li><span class="programma-time">19:15</span>Ontvangst in de aula met koffie en thee.</li>
+            <li><span class="programma-time">19:30</span>Opening in lokaal <strong>2.02</strong>.</li>
+            <li><span class="programma-time">20:00</span>Begin presentaties en rondleiding ICT-projecten.</li>
+            <li><span class="programma-time">21:00</span>Sluiting — daarna een hapje en drankje in het lokaal.</li>
         </ul>
     </div>
-</main>
+</section>
+
+<!-- ===== FOOTER ===== -->
 <footer>
     <div class="container">
         <p>Hoornbeeck College Kampen, Willem Hendrik Zwartallee, 8265 TZ Kampen</p>
-        <p>&copy; 2025 Hoornbeeck College. Alle rechten voorbehouden.</p>
+        <p>&copy; 2025 Mijn eerste website. All rights reserved.</p>
     </div>
 </footer>
+
+<!-- ===== JAVASCRIPT ===== -->
 <script>
-    const btn = document.getElementById('ouderavond-btn');
-    const balk = document.getElementById('ouderavond-balk');
-    btn.addEventListener('click', function(event){
-        event.preventDefault();
-        const isOpen = balk.style.display === 'block';
-        balk.style.display = isOpen ? 'none' : 'block';
-    });
-    document.addEventListener('click', function(e){
-        if(!balk.contains(e.target) && e.target !== btn && balk.style.display === 'block'){
-            balk.style.display = 'none';
-        }
-    });
+const btn = document.getElementById('ouderavond-btn');
+const balk = document.getElementById('ouderavond-balk');
+
+btn.addEventListener('click', function(event){
+    event.preventDefault();
+    balk.style.display = (balk.style.display === 'block') ? 'none' : 'block';
+});
+
+// Sluit submenu bij klikken buiten
+document.addEventListener('click', function(e){
+    if(!balk.contains(e.target) && e.target !== btn && balk.style.display === 'block'){
+        balk.style.display = 'none';
+    }
+});
 </script>
+
 </body>
 </html>

@@ -1,76 +1,186 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Organisatie - Hoornbeeck College</title>
-    <link rel="stylesheet" href="style_fixed.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        html, body { height: 100%; margin: 0; display: flex; flex-direction: column; min-height: 100vh; font-family: Arial, Helvetica, sans-serif; }
-        main { flex: 1; margin-top: 120px; }
-        header { background: linear-gradient(to right, #ffffff 0%, #00a9a3 100%); padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000; }
-        header .header-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
-        header .logo img { height: 60px; width: auto; }
-        header nav ul { list-style: none; display: flex; gap: 2rem; margin: 0; padding: 0; }
-        header nav ul li a { color: white; text-decoration: none; font-weight: bold; padding: 0.5rem 0; display: inline-block; transition: color 0.3s ease; }
-        header nav ul li a:hover { color: #f5ba36; }
-        .submenu-balk { display: none; background: linear-gradient(to right, #ffffff 0%, #00a9a3 100%); padding: 0.75rem 0; text-align: center; position: fixed; width: 100%; top: 100px; z-index: 900; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-        .submenu-balk ul { list-style: none; margin: 0; padding: 0; display: inline-flex; gap: 2rem; }
-        .submenu-balk a { text-decoration: none; color: white; font-weight: bold; transition: color 0.3s ease; }
-        .submenu-balk a:hover { color: #f5ba36; }
-        footer { background-color: #00a9a3; color: white; text-align: center; padding: 1rem 0; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organisatie - Hoornbeeck College</title>
+  <link rel="stylesheet" href="style_fixed.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    main {
+      margin-top: 140px;
+    }
+
+    .organisatie {
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    .organisatie h2 {
+      color: #004b86;
+      margin-bottom: 1rem;
+    }
+
+    .organisatie p {
+      max-width: 800px;
+      margin: 0 auto 2rem auto;
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+
+    /* ===== SFEERBEELDEN-GALERIJ ===== */
+    .sfeerbeelden {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto 3rem auto;
+    }
+
+    .sfeerbeelden img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .sfeerbeelden img:hover {
+      transform: scale(1.03);
+    }
+
+    /* ===== LIGHTBOX ===== */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 85vh;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.3);
+    }
+
+    .lightbox:target {
+      display: flex;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 30px;
+      right: 50px;
+      color: white;
+      font-size: 2rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .close-btn:hover {
+      color: #f5ba36;
+    }
+  </style>
 </head>
+
 <body>
-<header>
+  <!-- HEADER -->
+  <header>
     <div class="container header-inner">
-        <a href="index.html" class="logo">
-            <img src="logo-hoornbeeck.png" alt="Hoornbeeck College Logo">
-        </a>
-        <nav>
-            <ul>
-                <li><a href="about.html">Over het Hoornbeeck College</a></li>
-                <li><a href="#" id="ouderavond-btn">Ouderavond ▾</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="ontwikkelaar.html">Over de ontwikkelaar</a></li>
-            </ul>
-        </nav>
+      <a href="about.html" class="logo">
+        <img src="logo-hoornbeeck.png" alt="Hoornbeeck College Logo">
+      </a>
+
+      <nav>
+        <ul>
+          <li><a href="about.html">Over het Hoornbeeck College</a></li>
+          <li><a href="#" id="ouderavond-btn">Ouderavond ▾</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="ontwikkelaar.html">Over de ontwikkelaar</a></li>
+        </ul>
+      </nav>
     </div>
-</header>
-<div id="ouderavond-balk" class="submenu-balk">
+  </header>
+
+  <!-- SUBMENU -->
+  <div id="ouderavond-balk" class="submenu-balk">
     <ul>
-        <li><a href="doel.html">Doel</a></li>
-        <li><a href="organisatie.html">Organisatie</a></li>
-        <li><a href="programma.html">Programma</a></li>
-        <li><a href="plattegrond.html">Plattegrond</a></li>
+      <li><a href="doel.html">Doel</a></li>
+      <li><a href="organisatie.html" style="color:#f5ba36;">Organisatie</a></li>
+      <li><a href="programma.html">Programma</a></li>
+      <li><a href="plattegrond.html">Plattegrond</a></li>
     </ul>
-</div>
-<main>
+  </div>
+
+  <!-- MAIN -->
+  <main>
+    <section class="organisatie">
+      <h2>Organisatie van de ouderavond</h2>
+      <p>
+        De ouderavond wordt georganiseerd door het Hoornbeeck College Kampen. 
+        Het team van docenten, mentoren en ondersteunend personeel werkt samen om ouders 
+        een duidelijk beeld te geven van het onderwijs, de begeleiding en de sfeer op school. 
+        Tijdens de avond zijn er verschillende informatiemomenten en rondleidingen.
+      </p>
+
+      <div class="sfeerbeelden">
+        <a href="#img1"><img src="sb1.jpg" alt="Sfeerbeeld 1"></a>
+        <a href="#img2"><img src="sb2.jpg" alt="Sfeerbeeld 2"></a>
+        <a href="#img3"><img src="sb3.jpg" alt="Sfeerbeeld 3"></a>
+        <a href="#img4"><img src="sb4.jpg" alt="Sfeerbeeld 4"></a>
+        <a href="#img5"><img src="sb5.jpg" alt="Sfeerbeeld 5"></a>
+      </div>
+
+      <!-- LIGHTBOXEN -->
+      <div id="img1" class="lightbox">
+        <a href="#" class="close-btn">&times;</a>
+        <img src="sb1.jpg" alt="Sfeerbeeld 1">
+      </div>
+      <div id="img2" class="lightbox">
+        <a href="#" class="close-btn">&times;</a>
+        <img src="sb2.jpg" alt="Sfeerbeeld 2">
+      </div>
+      <div id="img3" class="lightbox">
+        <a href="#" class="close-btn">&times;</a>
+        <img src="sb3.jpg" alt="Sfeerbeeld 3">
+      </div>
+      <div id="img4" class="lightbox">
+        <a href="#" class="close-btn">&times;</a>
+        <img src="sb4.jpg" alt="Sfeerbeeld 4">
+      </div>
+      <div id="img5" class="lightbox">
+        <a href="#" class="close-btn">&times;</a>
+        <img src="sb5.jpg" alt="Sfeerbeeld 5">
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
     <div class="container">
-        <h1>Organisatie van de ouderavond</h1>
-        <p>Hier kun je uitleggen hoe de ouderavond georganiseerd is, wie er aanwezig zijn en wat de structuur is.</p>
+      <p>Hoornbeeck College Kampen, Willem Hendrik Zwartallee, 8265 TZ Kampen</p>
+      <p>&copy; 2025 Mijn eerste website. All rights reserved.</p>
     </div>
-</main>
-<footer>
-    <div class="container">
-        <p>Hoornbeeck College Kampen, Willem Hendrik Zwartallee, 8265 TZ Kampen</p>
-        <p>&copy; 2025 Hoornbeeck College. Alle rechten voorbehouden.</p>
-    </div>
-</footer>
-<script>
-    const btn = document.getElementById('ouderavond-btn');
-    const balk = document.getElementById('ouderavond-balk');
-    btn.addEventListener('click', function(event){
-        event.preventDefault();
-        const isOpen = balk.style.display === 'block';
-        balk.style.display = isOpen ? 'none' : 'block';
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    document.getElementById('ouderavond-btn').addEventListener('click', function(event) {
+      event.preventDefault();
+      const balk = document.getElementById('ouderavond-balk');
+      balk.style.display = balk.style.display === 'block' ? 'none' : 'block';
     });
-    document.addEventListener('click', function(e){
-        if(!balk.contains(e.target) && e.target !== btn && balk.style.display === 'block'){
-            balk.style.display = 'none';
-        }
-    });
-</script>
+  </script>
 </body>
 </html>
